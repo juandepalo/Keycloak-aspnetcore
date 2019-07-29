@@ -18,8 +18,12 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
    - [.NET Core 2.2](https://www.microsoft.com/net/core)
    - [Docker](https://docs.docker.com/engine/installation/)
 
-2. Ejecutar `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
-3. Abrir el navegador [http://localhost:8080] [http://localhost:10001].
+2. Clonar el proyecto:
+    `git clone https://github.com/juandepalo/Keycloak-aspnetcore.git`
+
+3. Ejecutar `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
+
+4. Abrir el navegador [http://localhost:8080] [http://localhost:10001].
 
 
 ![http://localhost:8080](./images/2019-07-29_8-40-30.png) ![http://localhost:10001](./images/2019-07-29_8-40-39.png)
