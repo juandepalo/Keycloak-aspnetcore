@@ -39,21 +39,40 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 Pulsamos sobre Administrador console. Nos solicitara las credenciales.
 Por defecto con docker-compose hemos creado el usuario **admin**, con contraseña **Pa55w0rd**
 ![login Consola](./images/loginconsola.png)
+
 Para nuestro Entorno de pruebas crearemos nuestro Realm "Demo", para ello pulsamos sobre la add Realm
 ![creacion Realm](./images/creacionRealm.png)
+
+Vamos a la pestaña "Security Defenses" y permitimos todos los origenes
+`X-Frame-Options : ALLOW-FROM *`
 ![Seguridad Realm](./images/SeguiridadRealm.png)
+
+Importamos el cliente [keycloak-Import/realm-export.json](./keycloak-Import/realm-export.json)
 ![Importar Cliente](./images/importacioncliente.png)
+
+Validamos configuración
 ![Configuración Cliente](./images/configuracionCliente.png)
+
+Generamos Secret key que debemos copiar para configurar el proyecto de Aspnet.core
 ![Creación de Secret](./images/RegeneracionSecret.png)
+
+Para consumir la api necestiamos añadir un usuario al cliente samplewebapi
 ![Creación Usuario](./images/CreacionUsuario.png)
+
+Le asignamos una contraseña
 ![Cambio contraseña](./images/contrasenaUsuario.png)
 ![Creacion contraseña Usuario](./images/creacionContrasenaUsuario.png)
 ![confirmacion cambio contrasñea](./images/confirmacioncambiocontrasena.png)
+
+Validamos los Roles
 ![Roles Usuario](./images/rolesUsuario.png)
+
+Para ver el esquema de autenficación de Keycloak nos situamos en Realm Setting
 ![Configuracion Realm](./images/obtenerconfiguracion.png)
 ![Datos Configuración](./images/datosconfiguracion.png)
 
-3. Configuracion Aspnet
+3. Configuracion Aspnet.
+   Con los datos obtenidos del esquema de keycloak configuramos nuestro cliente.
 
 ![Configuración Aspnet](./images/configuracionAspnet.png)
 
