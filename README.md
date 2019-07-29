@@ -101,11 +101,12 @@ Accerder a la url http://localhost:10001/swagger/
 
 
 ## Enlaces
-[Visual studio Nswag]([https://docs.microsoft.com/es-es/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.2&tabs=visual-studio])
+[Visual studio Nswag](https://docs.microsoft.com/es-es/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.2&tabs=visual-studio)
 
-[Nswag]([https://github.com/RicoSuter/NSwag])
+[Nswag](https://github.com/RicoSuter/NSwag)
 
-[Add OAuth2 authorization (OpenAPI 3)]([https://github.com/RicoSuter/NSwag/wiki/AspNetCore-Middleware])
+[Add OAuth2 authorization (OpenAPI 3)](https://github.com/RicoSuter/NSwag/wiki/AspNetCore-Middleware)
 
-[KeyCloak Documentacion]([https://www.keycloak.org/archive/documentation-6.0.html])
+[KeyCloak Documentacion]([ttps://www.keycloak.org/archive/documentation-6.0.html)
 
+[text](https://link)
