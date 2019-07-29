@@ -28,7 +28,7 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 
 1. Modificacion de host.
    1. Se debe modificar el fichero 'C:\Windows\System32\drivers\etc\hosts'
-        para que funcione localmente. Debemos añadir el nombre del contenedor de seguiridad, ya que con localhost da problemas. Este nombre se puede
+        para que funcione localmente. Debemos añadir el nombre del contenedor de seguridad, ya que con localhost da problemas. Este nombre se puede
         modificar en el docker-compose
 
     `127.0.0.1       localhost  keycloalocalhost`
