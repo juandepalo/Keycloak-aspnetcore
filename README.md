@@ -107,6 +107,5 @@ Accerder a la url http://localhost:10001/swagger/
 
 [Add OAuth2 authorization (OpenAPI 3)](https://github.com/RicoSuter/NSwag/wiki/AspNetCore-Middleware)
 
-[KeyCloak Documentacion]([ttps://www.keycloak.org/archive/documentation-6.0.html)
+[KeyCloak Documentacion](ttps://www.keycloak.org/archive/documentation-6.0.html)
 
-[text](https://link)
