@@ -69,6 +69,8 @@ Validamos los Roles
 
 Para ver el esquema de autenficación de Keycloak nos situamos en Realm Setting
 ![Configuracion Realm](./images/obtenerconfiguracion.png)
+
+y pulsamos sonbre el Endpoints "OpenID Endpoint Configuration"
 ![Datos Configuración](./images/datosconfiguracion.png)
 
 3. Configuracion Aspnet.
