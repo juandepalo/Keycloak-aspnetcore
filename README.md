@@ -27,9 +27,13 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 ## Configuración
 
 1. Modificacion de host.
-   1. Se debe modificar el fichero 'C:\Windows\System32\drivers\etc\hosts'
-        para que funcione localmente. Debemos añadir el nombre del contenedor de seguridad, ya que con localhost da problemas. Este nombre se puede
-        modificar en el docker-compose
+   1.  Para ejecutar localmente modificaremos el fichero 'C:\Windows\System32\drivers\etc\hosts' añadiendo el nombre del servicio de Keycloark
+        ![nombreserviciokeycloak](./images/nombreServicioKeycloak.png)
+
+    que se puede modificar en el [docker-compose](./src/sampleWebApi/docker-compose.yml).
+
+
+
 
     `127.0.0.1       localhost  keycloalocalhost`
 
