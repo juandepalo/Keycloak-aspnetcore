@@ -12,6 +12,16 @@ services:
       dockerfile: sampleWebApi/Dockerfile
     depends_on:
         - keycloak
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=44328
+    ports:
+      - "10001:80"
+      - "44328:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   mysql:
     image: mysql:5.7

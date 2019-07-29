@@ -1,15 +1,90 @@
 # Keycloak /  ASP.NET Core / Swagger Nswag
-
 Esta aplicación es un ejemplo de como proteger ASP.NET core 2.2 con un servidor de autentificacion oauth2 Keycloak.
 Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 
 ![](./images/2019-07-29_8-07-45.gif)
-
 ## Resumen
+- Server
+  - ASP.NET Core 2.2
+  - Docker: keycloack server con base de datos mysql
+- Client
+  - Nswag. interfaz de usuario y el generador de Swagger
 
 ## Demo
 
 ## Setup
 
-## Scripts
+1. Instalación:
+   - [.NET Core 2.2](https://www.microsoft.com/net/core)
+   - [Docker](https://docs.docker.com/engine/installation/)
+
+2. Ejecutar `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
+3. Abrir el navegador [http://localhost:8080] [http://localhost:10001].
+
+
+![http://localhost:8080](./images/2019-07-29_8-40-30.png) ![http://localhost:10001](./images/2019-07-29_8-40-39.png)
+
+## Configuración
+
+1. Modificacion de host.
+   1. Se debe modificar el fichero 'C:\Windows\System32\drivers\etc\hosts'
+        para que funcione localmente. Debemos añadir el nombre del contenedor de seguiridad, ya que con localhost da problemas. Este nombre se puede
+        modificar en el docker-compose
+
+    `127.0.0.1       localhost  keycloalocalhost`
+
+2. Configuracion de Keycloak.
+   1. He dejado la exportación de configuración de un cliente para el ejemplo en [keycloak-Import/realm-export.json](./keycloak-Import/realm-export.json)
+
+Pulsamos sobre Administrador console. Nos solicitara las credenciales.
+Por defecto con docker-compose hemos creado el usuario **admin**, con contraseña **Pa55w0rd**
+![login Consola](./images/loginconsola.png)
+Para nuestro Entorno de pruebas crearemos nuestro Realm "Demo", para ello pulsamos sobre la add Realm
+![creacion Realm](./images/creacionRealm.png)
+![Seguridad Realm](./images/SeguiridadRealm.png)
+![Importar Cliente](./images/importacioncliente.png)
+![Configuración Cliente](./images/configuracionCliente.png)
+![Creación de Secret](./images/RegeneracionSecret.png)
+![Creación Usuario](./images/CreacionUsuario.png)
+![Cambio contraseña](./images/contrasenaUsuario.png)
+![Creacion contraseña Usuario](./images/creacionContrasenaUsuario.png)
+![confirmacion cambio contrasñea](./images/confirmacioncambiocontrasena.png)
+![Roles Usuario](./images/rolesUsuario.png)
+![Configuracion Realm](./images/obtenerconfiguracion.png)
+![Datos Configuración](./images/datosconfiguracion.png)
+
+3. Configuracion Aspnet
+
+![Configuración Aspnet](./images/configuracionAspnet.png)
+
+
+4. Probar:
+
+Accerder a la url http://localhost:10001/swagger/
+![swagger](./images/swagger.png)
+
+![Autorización](./images/autentificacionSwagger.png)
+
+![Validar datos cliente](./images/datosautorizacion.png)
+
+
+![Pantalla login](./images/loginkeycloak.png)
+
+![Usuario SampleWebApi](./images/loginusuarioSampleWebapi.png)
+
+![Autentificación correcta](./images/AutorizacionCorrecta.png)
+
+![Prueba consumo api](./images/ejecutarApi.png)
+
+![Resultado](./images/Resultado.png)
+
+
+## Enlaces
+[Visual studio Nswag]([https://docs.microsoft.com/es-es/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.2&tabs=visual-studio])
+
+[Nswag]([https://github.com/RicoSuter/NSwag])
+
+[Add OAuth2 authorization (OpenAPI 3)]([https://github.com/RicoSuter/NSwag/wiki/AspNetCore-Middleware])
+
+[KeyCloak Documentacion]([https://www.keycloak.org/archive/documentation-6.0.html])
 

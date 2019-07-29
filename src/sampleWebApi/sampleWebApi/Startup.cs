@@ -30,7 +30,7 @@ namespace sampleWebApi
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", true, true)
             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
-            Configuration = Configuration = builder.Build(); 
+            Configuration = Configuration = builder.Build();
             Environment = env;
             token = Configuration.GetSection("tokenManagement").Get<TokenManagement>();
         }
@@ -44,7 +44,6 @@ namespace sampleWebApi
             services.AddMvc(options =>
             {
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());
-                // options.Filters.Add (typeof (HttpGlobalExceptionFilter));
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddAutoMapperSetup();
 
@@ -60,13 +59,6 @@ namespace sampleWebApi
                     {
                         Implicit = new OpenApiOAuthFlow()
                         {
-                            Scopes = new Dictionary<string, string>
-                            {
-                                {"read", "Read access to protected resources"},
-                                {"write", "Write access to protected resources"},
-                                {"profile", ""},
-                                {"email", ""}
-                            },
                             AuthorizationUrl = token.AuthorizationUrl,
                             TokenUrl = token.tokenUrl,
                         }
@@ -89,7 +81,7 @@ namespace sampleWebApi
 
             }).AddJwtBearer(o =>
             {
-                
+
                 o.Authority = token.Authority;
                 o.Audience = token.Audience;
                 o.RequireHttpsMetadata = false;
@@ -123,15 +115,11 @@ namespace sampleWebApi
 
 
             #endregion
-            
-       
-            
             // ASP.NET HttpContext dependency
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             // ASP.NET Authorization Polices
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
-            //services.AddSingleton<IAuthorizationHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
