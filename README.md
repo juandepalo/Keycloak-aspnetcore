@@ -15,29 +15,39 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 ## Setup
 
 1. Instalación:
-   - [.NET Core 2.2](https://www.microsoft.com/net/core)
-   - [Docker](https://docs.docker.com/engine/installation/)
+   - [.NET Core 2.2](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/install)
+   - [Docker](https://docs.docker.com/docker-for-windows/install/)
 
 2. Clonar el proyecto:
     `git clone https://github.com/juandepalo/Keycloak-aspnetcore.git`
 
-3. Ejecutar `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
 
-4. Abrir el navegador [http://localhost:8080] [http://localhost:10001].
+3. Situarse en el directorio:
+
+   cd ./Keycloak-aspnetcore/src/sampleWebApi
+4. ejecutar:
+
+   `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
+
+5. Abrir el navegador [http://localhost:8080](http://localhost:8080) [http://localhost:10001](http://localhost:10001).
 
 
-![http://localhost:8080](./images/2019-07-29_8-40-30.png) ![http://localhost:10001](./images/2019-07-29_8-40-39.png)
+![http://localhost:8080](./images/2019-07-29_8-40-30.png)
+
+![http://localhost:10001](./images/2019-07-29_8-40-39.png)
 
 ## Configuración
 
 1. Modificacion de host.
-   1.  Para ejecutar localmente modificaremos el fichero 'C:\Windows\System32\drivers\etc\hosts' añadiendo el nombre del servicio de Keycloark
-        ![nombreserviciokeycloak](./images/nombreServicioKeycloak.png)
+   1.  Para ejecutar localmente modificaremos el fichero 'C:\Windows\System32\drivers\etc\hosts' añadiendo el nombre del servicio de Keycloark que se puede modificar en el [docker-compose](./src/sampleWebApi/docker-compose.yml).
 
-    que se puede modificar en el [docker-compose](./src/sampleWebApi/docker-compose.yml).
-
+    ![nombreserviciokeycloak](./images/nombreServicioKeycloak.png)
 
 
+
+
+
+    modificación fichero hosts:
 
     `127.0.0.1       localhost  keycloalocalhost`
 
@@ -48,7 +58,7 @@ Pulsamos sobre Administrador console. Nos solicitara las credenciales.
 Por defecto con docker-compose hemos creado el usuario **admin**, con contraseña **Pa55w0rd**
 ![login Consola](./images/loginconsola.png)
 
-Para nuestro Entorno de pruebas crearemos nuestro Realm "Demo", para ello pulsamos sobre la add Realm
+Para nuestro entorno de pruebas crearemos nuestro Realm "Demo", para ello pulsamos sobre la add Realm
 ![creacion Realm](./images/creacionRealm.png)
 
 Vamos a la pestaña "Security Defenses" y permitimos todos los origenes
