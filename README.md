@@ -3,6 +3,7 @@ Esta aplicación es un ejemplo de como proteger ASP.NET core 2.2 con un servidor
 Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 
 ![](./images/2019-07-29_8-07-45.gif)
+
 ## Resumen
 - Server
   - ASP.NET Core 2.2
@@ -10,7 +11,6 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 - Client
   - Nswag. interfaz de usuario y el generador de Swagger
 
-## Demo
 
 ## Setup
 
