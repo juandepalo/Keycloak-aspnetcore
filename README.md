@@ -24,7 +24,7 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 
 3. Situarse en el directorio:
 
-   cd ./Keycloak-aspnetcore/src/sampleWebApi
+   cd ./Keycloak-aspnetcore
 4. ejecutar:
 
    `docker-compose -f "docker-compose.yml"  up -d --build --remove-orphans`
@@ -39,7 +39,7 @@ Tambien se implementa el consumo de la api con Nswag con OpenApi 3.
 ## Configuración
 
 1. Modificacion de host.
-   1.  Para ejecutar localmente modificaremos el fichero 'C:\Windows\System32\drivers\etc\hosts' añadiendo el nombre del servicio de Keycloark que se puede modificar en el [docker-compose](./src/sampleWebApi/docker-compose.yml).
+   1.  Para ejecutar localmente modificaremos el fichero 'C:\Windows\System32\drivers\etc\hosts' añadiendo el nombre del servicio de Keycloark que se puede modificar en el [docker-compose](./docker-compose.yml).
 
     ![nombreserviciokeycloak](./images/nombreServicioKeycloak.png)
 

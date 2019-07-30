@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29111.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sampleWebApi", "sampleWebApi\sampleWebApi.csproj", "{5C9F7574-EB7B-48C6-9C91-9C08B34EE38C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sampleWebApi", "src\sampleWebApi\sampleWebApi.csproj", "{5C9F7574-EB7B-48C6-9C91-9C08B34EE38C}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DCEA132A-D04E-414A-B514-C88A0B719F26}"
 EndProject

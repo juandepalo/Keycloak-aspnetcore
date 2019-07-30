@@ -8,7 +8,7 @@ services:
     image: ${DOCKER_REGISTRY-}samplewebapi
     container_name: samplewebapi
     build:
-      context: .
+      context: ./src
       dockerfile: sampleWebApi/Dockerfile
     depends_on:
         - keycloak
