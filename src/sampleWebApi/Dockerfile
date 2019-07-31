@@ -1,14 +1,14 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
 COPY ["sampleWebApi/sampleWebApi.csproj", "sampleWebApi/"]
 RUN dotnet restore "sampleWebApi/sampleWebApi.csproj"
 COPY . .
-WORKDIR "/src/sampleWebApi"
+WORKDIR /src/sampleWebApi
 RUN dotnet build "sampleWebApi.csproj" -c Release -o /app
 
 FROM build AS publish

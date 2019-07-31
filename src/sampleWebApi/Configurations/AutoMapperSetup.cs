@@ -13,9 +13,9 @@ namespace sampleWebApi.Configurations
             {
                 throw new ArgumentNullException(nameof(services));
             }
-            services.AddAutoMapper();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-          // Registering Mappings automatically only works if the 
+          // Registering Mappings automatically only works if the
           // Automapper Profile classes are in ASP.NET project
           AutoMapperConfig.RegisterMappings();
       }
